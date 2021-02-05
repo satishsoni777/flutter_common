@@ -4,7 +4,6 @@ import 'package:get_it/get_it.dart';
 class Injector {
   static var getIt = GetIt.I;
   static setup() {
-    print("Setp");
     getIt.registerSingleton<Routes>(RoutesImpl(), signalsReady: true);
   }
 }

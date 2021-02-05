@@ -8,9 +8,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  PageController _controller;
   @override
   void initState() {
-    _init();
+    // _init();
+    _controller = PageController(initialPage: 1);
     super.initState();
   }
 
@@ -19,13 +21,31 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(),
-        body: Center(
-          child: FlatButton(
-            child: Text("On Press"),
-            onPressed: () {
-              Navigator.pushNamed(context, Injector.getIt.get<Routes>().screen1);
-            },
-          ),
+        body: PageView(
+          controller: _controller,
+          children: [
+            FlatButton(
+              child: Text("Left Screen"),
+              onPressed: () {
+                Navigator.pushNamed(
+                    context, Injector.getIt.get<Routes>().screen1);
+              },
+            ),
+            FlatButton(
+              child: Text("Home Screen"),
+              onPressed: () {
+                Navigator.pushNamed(
+                    context, Injector.getIt.get<Routes>().screen1);
+              },
+            ),
+            FlatButton(
+              child: Text("Right Screen"),
+              onPressed: () {
+                Navigator.pushNamed(
+                    context, Injector.getIt.get<Routes>().screen1);
+              },
+            ),
+          ],
         ));
   }
 }

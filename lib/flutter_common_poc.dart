@@ -5,3 +5,4 @@ export 'src/home_page/init_app.dart' show InitApp;
 export 'src/di/di.dart' show Injector;
 export 'src/webservices/base_request.dart' show BaseRequest;
 export 'src/routes.dart' show Routes;
+export 'src/routes.dart' show RoutesImpl;
