@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_common_poc/flutter_common_poc.dart';
 import 'package:flutter_common_poc/src/di/di.dart';
 import 'package:flutter_common_poc/src/routes.dart';
 

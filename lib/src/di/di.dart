@@ -5,5 +5,6 @@ class Injector {
   static var getIt = GetIt.I;
   static setup() {
     getIt.registerSingleton<Routes>(RoutesImpl(), signalsReady: true);
+    
   }
 }

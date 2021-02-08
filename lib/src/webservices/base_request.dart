@@ -6,6 +6,7 @@ abstract class BaseRequest {
   HttpMethod method;
   dynamic body;
   Map<String, String> headers;
+  String baseUrl;
 
   // TODO Query Params
 
@@ -31,7 +32,6 @@ abstract class BaseRequest {
     this.url = await getBaseUrl() + endpoint;
     this.authenticated = authenticated;
     this.body = body;
-    headers = await setRequestHeaders();
   }
 
   executeRequest() async {
@@ -47,9 +47,13 @@ abstract class BaseRequest {
     }
   }
 
-  Future<Map<String, String>> setRequestHeaders();
+  setRequestHeaders() async {
+    headers = {"": ""};
+  }
 
-  Future<String> getBaseUrl();
+  getBaseUrl() {
+    baseUrl = "";
+  }
 }
 
 enum HttpMethod { get, post, put, delete }

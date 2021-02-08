@@ -2,7 +2,7 @@ name: flutter_common_poc
 description: A new Flutter package project.
 version: 0.0.1
 author: satish
-homepage: https://github.com/satishsoni777/flutter_common.git
+homepage: 
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

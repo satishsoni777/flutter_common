@@ -1,4 +1,4 @@
-abstract class Storage{
+abstract class Utility{
   String getHeader;
   String getToken;
 }
