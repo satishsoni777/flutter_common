@@ -11,12 +11,10 @@ class _HomePageState extends State<HomePage> {
   PageController _controller;
   @override
   void initState() {
-    // _init();
     _controller = PageController(initialPage: 1);
     super.initState();
   }
 
-  _init() => Injector.setup();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
